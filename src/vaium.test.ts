@@ -56,6 +56,14 @@ describe('vaium', () => {
         expect (resultado).toEqual("2 vai um");
     });
 
+    test('Soma n casas decimais separadas', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("456+155");
+        //assert
+        expect (resultado).toEqual("2 vai um");
+    });
 
     
 
