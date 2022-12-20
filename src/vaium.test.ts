@@ -1,3 +1,4 @@
+import exp from "constants";
 import { Vaium } from "./vaium";
 
 describe('vaium', () => {
@@ -82,6 +83,15 @@ describe('vaium', () => {
         //assert
         expect (resultado).toEqual("2 vai um");
     });
+
+    test('Soma final acumulando restos', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("52+2348");
+        //assert
+        expect (resultado).toEqual("2 vai um");
+    })
 
     
 

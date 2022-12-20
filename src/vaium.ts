@@ -5,7 +5,8 @@ class Vaium {
     contaVaium(expressao: string):string{
 
         var vaiQuantos = 0;
-        
+        var resto = 0;
+
         Vaium.quebraString(expressao);
         
         var cont = Vaium.verificaTamanho();
@@ -14,7 +15,8 @@ class Vaium {
         
         for(cont; cont>0; cont--)
         {
-            vaiQuantos = vaiQuantos + Vaium.verificaSoma(cont-1);
+            resto = Vaium.verificaSoma(cont-1, resto);
+            vaiQuantos = vaiQuantos + resto;
         }
 
         var resultado = vaiQuantos + " vai um";
@@ -34,14 +36,14 @@ class Vaium {
 
     }
 
-    static verificaSoma(cont: number) {
+    static verificaSoma(cont: number, resto: number) {
 
         let numero1 = parseInt(this.numeros[0].substr(cont,1));
         let numero2 = parseInt(this.numeros[1].substr(cont,1));
-        console.log(this.numeros);
-        if((numero1 + numero2) >= 10 )
+        
+        if((numero1 + numero2 + resto) >= 10 )
         {
-            let vaiQuantos = Math.floor((numero1 + numero2)/10);
+            let vaiQuantos = Math.floor((numero1 + numero2 + resto)/10);
             
             return vaiQuantos;
         }
