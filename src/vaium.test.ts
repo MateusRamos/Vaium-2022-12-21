@@ -56,11 +56,29 @@ describe('vaium', () => {
         expect (resultado).toEqual("2 vai um");
     });
 
-    test('Soma n casas decimais separadas', () => {
+    test('Soma n casas decimais separadas de tamanhos iguais', () => {
         //arrange
         const sut = new Vaium();
         //action
         const resultado = sut.contaVaium("456+155");
+        //assert
+        expect (resultado).toEqual("2 vai um");
+    });
+
+    test('Soma n x m casas decimais separadas, n > m', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("56+155");
+        //assert
+        expect (resultado).toEqual("2 vai um");
+    });
+
+    test('Soma n x m casas decimais separadas, n < m', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("156+55");
         //assert
         expect (resultado).toEqual("2 vai um");
     });

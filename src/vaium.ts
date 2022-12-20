@@ -18,7 +18,6 @@ class Vaium {
         }
 
         var resultado = vaiQuantos + " vai um";
-
         return resultado;
     }
 
@@ -39,7 +38,7 @@ class Vaium {
 
         let numero1 = parseInt(this.numeros[0].substr(cont,1));
         let numero2 = parseInt(this.numeros[1].substr(cont,1));
-        
+        console.log(this.numeros);
         if((numero1 + numero2) >= 10 )
         {
             let vaiQuantos = Math.floor((numero1 + numero2)/10);
