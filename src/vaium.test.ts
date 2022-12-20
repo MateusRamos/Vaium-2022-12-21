@@ -29,6 +29,18 @@ describe('vaium', () => {
         expect (resultado).toEqual("1 vai um");
     });
 
+    
 
+    
+
+    test('Verificando Erro', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        //assert
+        expect ( 
+            () => { sut.contaVaium("a+5") } 
+        ).toThrow('');
+    });
 
 })

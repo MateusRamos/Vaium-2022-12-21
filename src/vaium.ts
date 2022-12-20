@@ -4,6 +4,8 @@ class Vaium {
 
         var numeros = Vaium.quebraString(expressao);
 
+        Vaium.verificaErro(numeros);
+
         var vaiQuantos = Vaium.verificaSoma(numeros);
 
         var resultado = vaiQuantos + " vai um";
@@ -23,8 +25,16 @@ class Vaium {
         return numeros;
     }
 
-    static verificaSoma(numeros: any[])
-    {
+    static verificaErro(numeros: any[]) {
+
+        if( (isNaN(Number(numeros[0]))) ||  (isNaN(Number(numeros[1])))  )
+        {
+            throw new Error("Essa soma é inválida!");
+        }
+
+    }
+
+    static verificaSoma(numeros: any[]) {
 
         if((numeros[0] + numeros[1]) >= 10 )
         {
