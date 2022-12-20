@@ -4,9 +4,11 @@ class Vaium {
 
         var numeros = Vaium.quebraString(expressao);
 
-        console.log(numeros);
+        var vaiQuantos = Vaium.verificaSoma(numeros);
 
-        return "1 vai um";
+        var resultado = vaiQuantos + " vai um";
+
+        return resultado;
     }
 
     static quebraString(expressao: string) {
@@ -20,6 +22,22 @@ class Vaium {
 
         return numeros;
     }
+
+    static verificaSoma(numeros: any[])
+    {
+
+        if((numeros[0] + numeros[1]) >= 10 )
+        {
+            let vaiQuantos = Math.floor((numeros[0] + numeros[1]/10));
+
+            return vaiQuantos;
+        }
+        else
+        {
+            return 0;
+        }
+
+    } 
 
 }
 
