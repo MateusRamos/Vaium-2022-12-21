@@ -47,7 +47,16 @@ describe('vaium', () => {
         expect (resultado).toEqual("1 vai um");
     });
 
-    
+    test('Soma 2 casas decimais e 2 vai um, porcão', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("91+19");
+        //assert
+        expect (resultado).toEqual("2 vai um");
+    });
+
+
     
 
     //Testes de erro:    
