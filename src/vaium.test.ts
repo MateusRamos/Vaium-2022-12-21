@@ -6,11 +6,18 @@ describe('vaium', () => {
         //arrange
         const sut = new Vaium();
         //action
-        const resultado = sut.contaVaium(1+9);
+        const resultado = sut.contaVaium("1+9");
         //assert
         expect (resultado).toEqual("1 vai um");
     })
 
-
+    test('Quebrando string', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("1+9");
+        //assert
+        expect (resultado).toEqual("1 vai um");
+    })
 
 })
