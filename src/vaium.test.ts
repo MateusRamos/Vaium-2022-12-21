@@ -29,9 +29,20 @@ describe('vaium', () => {
         expect (resultado).toEqual("1 vai um");
     });
 
+    test('Verificando Soma SEM vai um', () => {
+        //arrange
+        const sut = new Vaium();
+        //action
+        const resultado = sut.contaVaium("1+8");
+        //assert
+        expect (resultado).toEqual("0 vai um");
+    });
+
     
 
     
+
+    //Testes de erro:    
 
     test('Verificando Erro', () => {
         //arrange
