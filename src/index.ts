@@ -5,7 +5,7 @@ const app = express()
 
 const route = Router()
 
-route.get("/vaium/numero", vaiumController);
+route.get("/vaium/soma", vaiumController);
 
 app.use(express.json());
 app.use(route);

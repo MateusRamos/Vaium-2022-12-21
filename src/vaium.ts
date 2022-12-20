@@ -2,9 +2,9 @@ class Vaium {
 
 
 
-    contaVaium(arabico: number):string{
+    contaVaium(soma: number):string{
 
-        return "0";
+        return "1 vai um";
 
     }
 
